@@ -62,7 +62,7 @@ Now, we can install Python 3:
 
 .. code-block:: console
 
-    $ brew install python3
+    $ brew install python
 
 This will take a minute or two.
 
@@ -70,9 +70,7 @@ This will take a minute or two.
 Pip
 ---
 
-Homebrew installs ``pip3`` for you.
-
-``pip3`` is the alias to ``pip`` pointing to the Homebrew'd Python 3.
+Homebrew installs ``pip`` pointing to the Homebrew'd Python 3 for you.
 
 Working with Python 3
 ---------------------
@@ -85,7 +83,7 @@ version of Python 3 as well.
 
     $ python
 
-will launch the system Python interpreter.
+will launch the homebrew-installed Python 3 interpreter.
 
 .. code-block:: console
 
@@ -100,8 +98,16 @@ will launch the homebrew-installed Python 2 interpreter (if any).
 will launch the homebrew-installed Python 3 interpreter.
 
 If the Homebrew version of Python 2 is installed then ``pip2`` will point to Python 2.
-If the Homebrew version of Python 3 is installed then ``pip3`` will point to Python 3.
+If the Homebrew version of Python 3 is installed then ``pip`` will point to Python 3.
 
+The rest of the guide will assume that ``python`` references Python 3.
+
+.. code-block:: console
+
+    # Do I have a Python 3 installed?
+    $ python --version
+    Python 3.6.4 # Success! 
+    # If you still see 2.7 ensure in PATH /usr/local/bin/ takes pecedence over /usr/bin/
 
 Pipenv & Virtual Environments
 -----------------------------
